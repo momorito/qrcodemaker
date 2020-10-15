@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QRコードメーカー">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://momorito.github.io/qrcodemaker/">
+    <meta property="og:title" content="QRコードメーカー">
+    <meta property="og:description" content="QRコードメーカー">
+    <meta property="og:image" content="https://momorito.github.io/sosucheckerplusweb/img/qrcodemaker.png">
+    <meta property="twitter:title" content="QRコードメーカー"/>
+    <meta property="twitter:image" content="https://momorito.github.io/sosucheckerplusweb/img/qrcodemaker.png"/>
+    <meta name=”twitter:card” content=”summary“ />
+    <meta name="twitter:site:id" content="@momorito">
+    <meta name="twitter:creator" content="@momorito">
+    <title>QRコードメーカー</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  </head>
+  <body>
+    <div id = "title">
+      <h1>QRコードメーカー</h1>
+      <p>任意のQRコードが作成できます。
+    </div>
+    <div id="inputForm">
+      <textarea id="t_message" name="message" minlength="1" maxlength="200" placeholder="QRコードに埋め込む文書を入力してください。"></textarea>
+    </div>
+    <div class="selectParams">
+      <p>サイズ</p>
+      <select id="selectS" name="selectSize">
+        <option value ="1">100×100</option>
+        <option value ="2">200×200</option>
+        <option value ="3">300×300</option>
+        <option value ="4">400×400</option>
+        <option value ="5">500×500</option>
+      </select>
+    </div>
+    <div class="selectParams">
+      <p>色</p>
+      <select id="selectC" name="selectColor">
+        <option value ="1">黒</option>
+        <option value ="2">青</option>
+        <option value ="3">赤</option>
+        <option value ="4">緑</option>
+      </select>
+    </div>
+    <div id="buttons">
+      
+      <button type="button" name="button" id="button" onclick="createQr()">QRコード生成</button>
+      <button type="button" name="button" id="clear" onclick="clearContents()">入力クリア</button>
+    </div>
+    <div id ="resultArea">
+      <h2> 作成結果</h2>
+      <p id="result"></p>
+      <img id="qrCodeImg" />
+      <div id="downloadLink">
+        <a id="png"></a>
+        <a id="jpg"></a>
+        <a id="svg"></a>
+      </div>
+
+    </div>
+  
+    
+    <script type="text/javascript" src="scripts/makeQr.js"></script>
+    <noscript>Javascriptが利用できません</noscript>
+    <footer>
+      <p><small>Copyright © <a href="https://momorito.github.io/">momorito</a> All Rights Reserved.</small></p>
+    </footer>
+  </body>
+
+</html>
